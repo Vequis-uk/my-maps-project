@@ -19,3 +19,16 @@ export class AppComponent {
     this.lng = this.lngValue;
   }
 }
+
+
+
+
+
+
+
+
+
+
+//JSON server
+
+//set long and lat in JSON then import it into the value
