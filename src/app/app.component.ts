@@ -9,8 +9,8 @@ export class AppComponent {
   title = 'My First AGM Project';
   public lat = 53.95;
   public lng = -1.065;
-  public latValue = 60;
-  public lngValue = -1.065;
+  public latValue = this.lat;
+  public lngValue = this.lng;
 
   updateLatitude(){
     this.lat = this.latValue;
