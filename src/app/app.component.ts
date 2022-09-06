@@ -7,6 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'My First AGM Project';
-  lat = 53.95;
-  lng = -1.065;
+  public lat = 53.95;
+  public lng = -1.065;
+  public latValue = 60;
+  public lngValue = -1.065;
+
+  updateLatitude(){
+    this.lat = this.latValue;
+  }
+  updateLongitude(){
+    this.lng = this.lngValue;
+  }
 }
