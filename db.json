@@ -1,8 +1,4 @@
-[
-  {
-    "latJson": 53.95
-  },
-  {
-    "lngJson": -1.065
-  }
-]
+{
+  "latJson": [{ "value": 53.95 }],
+  "lngJson": [{ "value": -1.065 }]
+}
