@@ -18,10 +18,12 @@ export class AppComponent {
   public lng = -1.065;
   public latValue = this.lat;
   public lngValue = this.lng;
-  data: mapDataJson[] = mapData;
+ // data: mapDataJson[] = mapData;
 
   // this is trying to connect to the config.service but is not working
-  constructor(private service: ConfigService) {}
+  constructor(private service: ConfigService) {
+    this.service.getMapData();
+  }
 
   updateLatitude() {
     this.lat = this.latValue;
