@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ConfigService } from './config.service';
 
 @Component({
   selector: 'app-root',
@@ -19,6 +20,7 @@ export class AppComponent {
     this.lng = this.lngValue;
   }
 }
+console.log("hello")
 
 
 
