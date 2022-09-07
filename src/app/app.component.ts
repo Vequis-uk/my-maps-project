@@ -13,24 +13,19 @@ export class AppComponent {
   public latValue = this.lat;
   public lngValue = this.lng;
 
-  updateLatitude(){
+  constructor(private service: ConfigService) {}
+
+  updateLatitude() {
     this.lat = this.latValue;
   }
-  updateLongitude(){
+  updateLongitude() {
     this.lng = this.lngValue;
   }
+
+  displayMapData(){
+    console.log(ConfigService)
+  }
 }
-console.log("hello")
-
-
-
-
-
-
-
-
-
 
 //JSON server
-
 //set long and lat in JSON then import it into the value
