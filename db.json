@@ -1,10 +1,8 @@
-{
-    "mapData": [
-      {
-        "latitude": 53.95
-      },
-      {
-        "longitude": -1.065
-      }
-    ]
+[
+  {
+    "latJson": 53.95
+  },
+  {
+    "lngJson": -1.065
   }
+]
