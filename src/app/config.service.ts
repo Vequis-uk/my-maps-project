@@ -10,10 +10,7 @@ import { HammerGestureConfig } from '@angular/platform-browser';
 export class ConfigService {
   constructor(private http: HttpClient) {
   }
-  public getLatData(): Observable<any> {
-    return this.http.get("http://localhost:3000/latJson");
-  }
-  public getLngData(): Observable<any> {
-    return this.http.get("http://localhost:3000/lngJson");
+  public getCoordData(): Observable<any> {
+    return this.http.get("http://localhost:3000/getCoords");
   }
 }

@@ -1,12 +1,13 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ConfigService } from './config.service';
+/* import { combineLatest } from 'rxjs'; */
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'My First AGM Project';
   public lat = 0;
   public lng = 0;
@@ -15,17 +16,26 @@ export class AppComponent implements OnInit {
 
   constructor(private service: ConfigService) {}
 
-  ngOnInit(): void {
-    this.service.getLatData().subscribe((latdatajson) => {
-      console.log(latdatajson);
-    });
-    this.service.getLngData().subscribe((lngdatajson) => {
-      console.log(lngdatajson);
-    });
-  }
 
-  clickJson() {
-    console.log("send help");
+  //this was combining two seperate service requests due to the layout of the 
+  //db.json file, after combining them into one object 
+/*   clickJson(): void {
+    combineLatest([
+      this.service.getLatData(),
+      this.service.getLngData(),
+    ]).subscribe(([lat, lng]) => {
+      this.lat = lat.latvalue;
+      this.lng = lng.lngvalue;
+    });
+  } */
+
+  clickDavidTest(){
+    this.service.getCoordData().subscribe((latdatajson) => {
+      this.lat = latdatajson.latvalue;
+    });
+    this.service.getCoordData().subscribe((lngdatajson) => {
+      this.lng = lngdatajson.lngvalue;
+    });
   }
 
   updateLatitude() {

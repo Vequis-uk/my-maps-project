@@ -1,4 +1,3 @@
 {
-  "latJson": { "latvalue": 53.95 },
-  "lngJson": { "lngvalue": -1.065 }
+  "getCoords": { "latvalue": 53.95, "lngvalue": -1.065 }
 }
